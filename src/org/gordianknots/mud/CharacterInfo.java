@@ -1,11 +1,13 @@
 package org.gordianknots.mud;
 
+import java.util.Scanner;
+
 public class CharacterInfo {
     //Initialize Variables
     public String charName;
     public String charClass;
     public int charLevel = 1;
-    public int charLocation;
+    public int charLocation = 0;
 
     public String getCharName() {
         return charName;

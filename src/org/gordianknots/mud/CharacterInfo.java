@@ -6,7 +6,7 @@ public class CharacterInfo {
     //Initialize Variables
     public String charName;
     public String charClass;
-    public int charLevel = 1;
+    public Integer charLevel = 1;
     public int charLocation = 0;
 
     public String getCharName() {

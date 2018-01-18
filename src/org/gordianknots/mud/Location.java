@@ -1,7 +1,5 @@
 package org.gordianknots.mud;
 
-import java.util.List;
-
 public class Location {
     public String locationDescription;
     public int locationNumber;
@@ -37,18 +35,18 @@ public class Location {
         this.locationNumber = locNum;
         this.locationDescription = locDesc;
         this.locationDirections = locDir;
-    };
+    }
 
     public static Location[] setUpLocations() {
         //Create Locations
-        Location[] locations = new Location[17];
+        Location[] locations = new Location[18];
 
         // Create String array for room creation
-        String[] locationDirect = new String[] {"e", "1", "s", "12"};
+        String[] locationDirect = new String[] {"n", "17", "e", "1", "s", "12"};
 
         // Enter values for directions
         locations[0] = new Location(0,
-                "You find youself in a townsquare. There are various people moving about their daily routine.", locationDirect);
+                "You find youself in a townsquare. \nThere are various people moving about their daily routine. To the north there is a vendor selling goods, to the south a wagon road, and to the east a cobblestone road.", locationDirect);
 
         locationDirect = new String[] {"e", "2", "w", "0"};
         locations[1] = new Location(1,
@@ -60,15 +58,15 @@ public class Location {
 
         locationDirect = new String[] {"e", "5", "s", "4", "w", "2"};
         locations[3] = new Location(3,
-                "The cobblestone road continues to the east and an overgrown path leads to a secluded grove to the south.", locationDirect);
+                "The cobblestone road continues to the east and an overgrown \npath leads to a secluded grove to the south.", locationDirect);
 
         locationDirect = new String[] {"n", "3"};
         locations[4] = new Location(4,
-                "You have entered a secluded grove.  You hear small scurrying sounds behind the trees.", locationDirect);
+                "You have entered a secluded grove.  \nYou hear small scurrying sounds behind the trees.", locationDirect);
 
         locationDirect = new String[] {"e", "6", "w", "3"};
         locations[5] = new Location(5,
-                "The cobblestone road continues east.  In the distance you can see it curve around a hill.", locationDirect);
+                "The cobblestone road continues east.  \nIn the distance you can see it curve around a hill.", locationDirect);
 
         locationDirect = new String[] {"s", "7", "w", "5"};
         locations[6] = new Location(6,
@@ -76,27 +74,27 @@ public class Location {
 
         locationDirect = new String[] {"n", "6", "s", "8"};
         locations[7] = new Location(7,
-                "The cobblestone road is less maintained here. Many of the stones are mossy", locationDirect);
+                "The cobblestone road is less maintained here. \nMany of the stones are mossy", locationDirect);
 
         locationDirect = new String[] {"n", "7", "s", "9"};
         locations[8] = new Location(8,
-                "There are more holes than cobblestones here. It is obvioous that whatever this road was used for, it it no longer.", locationDirect);
+                "There are more holes than cobblestones here. \nIt is obvious that whatever this road was used for, it is no longer.", locationDirect);
 
         locationDirect = new String[] {"n", "8", "s", "11", "w", "10"};
         locations[9] = new Location(9,
-                "As you crest a rise you can see a sheltered cave to the west and a ravine to the south.", locationDirect);
+                "As you crest a rise you can see a sheltered cave to the \nwest and a ravine to the south.", locationDirect);
 
         locationDirect = new String[] {"e", "9"};
         locations[10] = new Location(10,
-                "You are at the entrance to a cave.  Inside you can see a large bear sleeping away in its fuzzy pajamas.  You think better of entering the cave and stay hidden.", locationDirect);
+                "You are at the entrance to a cave.  \nInside you can see a large bear sleeping away in its fuzzy pajamas.  \nYou think better of entering the cave and stay hidden.", locationDirect);
 
         locationDirect = new String[] {"n", "9"};
         locations[11] = new Location(11,
-                "You climb down into the ravine.  The oyther sides are to steap to climb, looks like you are at the end of your walkabout.", locationDirect);
+                "You climb down into the ravine.  \nThe other sides are too steap to climb, looks like you are at the end of your walkabout.", locationDirect);
 
         locationDirect = new String[] {"n", "0", "s", "13"};
         locations[12] = new Location(12,
-                "This looks like a heavily traveled packed dirt road.  There is currently no one on it though.", locationDirect);
+                "This looks like a heavily traveled, packed dirt road.  \nThere is currently no one on it though.", locationDirect);
 
         locationDirect = new String[] {"n", "12", "s", "14"};
         locations[13] = new Location(13,
@@ -108,11 +106,14 @@ public class Location {
 
         locationDirect = new String[] {"w", "14", "u", "16"};
         locations[15] = new Location(15,
-                "Old tombstones are spread around the cemetary.  They are overgrown and the area has a dreary feeling to it.  There is a wall that appears you could climb up.", locationDirect);
+                "Old tombstones are spread around the cemetary.  \nThey are overgrown and the area has a dreary feeling to it.  \nThere is a wall that appears you could climb up.", locationDirect);
 
         locationDirect = new String[] {"d", "15"};
         locations[16] = new Location(16,
-                "You climb up onto the wall and can see the undead trying to climb up from the other side.  They cannot get up easliy but it is only a matter of time before they make it to you.", locationDirect);
+                "You climb up onto the wall and can see the undead trying to climb up from the other side.  \nThey cannot get up easliy but it is only a matter of time before they make it to you.", locationDirect);
+
+        locationDirect = new String[] {"s", "0"};
+        locations[17] =  new Location(17, "You approach the vendor inquiring about what they offer for sale.", locationDirect);
 
         return locations;
     }

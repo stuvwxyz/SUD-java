@@ -8,7 +8,7 @@ public class Move {
     public static void question(Location[] locations, CharacterInfo player) {
         Scanner moveReader = new Scanner(System.in);  // Reading from System.in
         System.out.println();
-        System.out.print("Where would you like to move? ");
+        System.out.print("What action would you like to take? ");
         String newLoc = moveReader.nextLine(); // Scans the next token of the input as an int.
 
         move(locations, player, newLoc);
@@ -22,17 +22,14 @@ public class Move {
                 int updateLoc = Integer.parseInt(locations[player.getCharLocation()].locationDirections[i+1]);
                 player.setCharLocation(updateLoc);
             }
-            else if (newLoc.equals('q')) {
-                found = true;
-                player.setCharLocation(999);
-            }
         }
 
+        System.out.println(found);
         if (found == true) {
             System.out.println("You have moved " + newLoc);
         }
         else {
-            System.out.println("That is not a valid direction");
+            System.out.println("\n\n\n\nThat is not a valid direction");
         }
 
     }

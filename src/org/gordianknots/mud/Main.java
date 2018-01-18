@@ -1,5 +1,6 @@
 package org.gordianknots.mud;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -20,6 +21,10 @@ public class Main {
         System.out.println("You are currently level: " + player.getCharLevel());
 
         Location[] locations = Location.setUpLocations();
+        Item[] items = Item.createItems();
+
+//        Need to look into printing arrays without for loop
+//        System.out.println(Arrays.toString(items));
 
         while (player.getCharLocation() != 999) {
             Current.currentLocation(locations, player);
